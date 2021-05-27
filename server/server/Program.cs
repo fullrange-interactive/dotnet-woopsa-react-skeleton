@@ -1,4 +1,5 @@
 ﻿using System;
+using Woopsa;
 
 namespace server
 {
@@ -6,7 +7,11 @@ namespace server
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Starting server");
+
+            var server = new Server();
+
+            var woopsaServer = new WoopsaServer(server);
         }
     }
 }
