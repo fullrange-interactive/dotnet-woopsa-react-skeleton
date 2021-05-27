@@ -21,6 +21,6 @@ Simply press "run" in Visual Studio
 ## Client
 Go to /client and run
 
-    yarn start
+    npm run start
 
 This will start a development server and open your browser to the correct page.
