@@ -10,7 +10,7 @@ namespace server
         public double RandomNumber { get; set; } = 0.0;
 
         public Server()
-        { 
+        {
             _thread = new Thread(UpdateRandomNumber);
             _thread.Start();
         }
@@ -29,5 +29,12 @@ namespace server
                 Thread.Sleep(TimeSpan.FromSeconds(1));
             }
         }
+
+
+
+        public string hello { get; set; } = "coucou";
+
+
+
     }
 }
