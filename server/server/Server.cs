@@ -15,6 +15,11 @@ namespace server
             _thread.Start();
         }
 
+        // This is the function that is called in our thread.
+        // It's an endless loops that sleeps for a second every
+        // time we change the random number
+        // Woopsa will automatically notice that the RandomNumber value
+        // has changed.
         private void UpdateRandomNumber()
         {
             var random = new Random();
