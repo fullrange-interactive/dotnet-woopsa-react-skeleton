@@ -9,6 +9,11 @@ namespace server
 
         public double RandomNumber { get; set; } = 0.0;
 
+        public string time24 { get; set; } = "";
+
+
+
+
         public Server()
         {
             _thread = new Thread(UpdateRandomNumber);
@@ -23,10 +28,17 @@ namespace server
         private void UpdateRandomNumber()
         {
             var random = new Random();
+
             while (true)
             {
                 RandomNumber = random.NextDouble();
                 Thread.Sleep(TimeSpan.FromSeconds(1));
+
+                time24 = DateTime.Now.ToString("HH:mm:ss");
+
+
+                System.Console.WriteLine(time24);
+
             }
         }
 
